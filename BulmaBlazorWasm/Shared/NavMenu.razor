@@ -1,31 +1,24 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="">BulmaBlazorWasm</a>
-        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+﻿<nav class="navbar is-primary is-fixed-top">
+    <div class="navbar-brand">
+        <a class="navbar-item">BulmaZor</a>
     </div>
-</div>
+    <div class="navbar-start">
+        <NavLink class="navbar-item" href="" Match="NavLinkMatch.All">
+            <span>Home</span>
+        </NavLink>
+        <NavLink class="navbar-item" href="counter" >
+            <span>Counter</span>
+        </NavLink>
+        <NavLink class="navbar-item" href="fetchdata" >
+            <span>Fetch Data</span>
+        </NavLink>
+    </div>
 
-<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
-    <nav class="flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Home
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="oi oi-plus" aria-hidden="true"></span> Counter
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="fetchdata">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
-            </NavLink>
-        </div>
-    </nav>
-</div>
+    <div class="navbar-end">
+        <a class="navbar-item">About</a>
+    </div>
+
+</nav>
 
 @code {
     private bool collapseNavMenu = true;
