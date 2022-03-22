@@ -1,32 +1,13 @@
-﻿<nav class="navbar is-primary is-fixed-top">
-    <div class="navbar-brand">
-        <a class="navbar-item">BulmaZor</a>
-    </div>
-    <div class="navbar-start">
-        <NavLink class="navbar-item" href="" Match="NavLinkMatch.All">
-            <span>Home</span>
-        </NavLink>
-        <NavLink class="navbar-item" href="counter" >
-            <span>Counter</span>
-        </NavLink>
-        <NavLink class="navbar-item" href="fetchdata" >
-            <span>Fetch Data</span>
-        </NavLink>
-    </div>
-
-    <div class="navbar-end">
-        <a class="navbar-item">About</a>
-    </div>
-
-</nav>
-
-@code {
-    private bool collapseNavMenu = true;
-
-    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
-    {
-        collapseNavMenu = !collapseNavMenu;
-    }
-}
+﻿<Navbar IsFixedTop Color.Primary>
+    <BrandSlot>
+        <NavbarItem>BulmaZor</NavbarItem>
+    </BrandSlot>
+    <StartSlot>
+        <NavbarItem href="">Home</NavbarItem>
+        <NavbarItem href="counter">Counter</NavbarItem>
+        <NavbarItem href="fetchdata">FetchData</NavbarItem>
+    </StartSlot>
+    <EndSlot>
+        <NavbarItem href="">About</NavbarItem>
+    </EndSlot>
+</Navbar>
