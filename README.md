@@ -1,3 +1,3 @@
-#Bulma Blazor Wasm Template
+# Bulma Blazor Wasm Template
 
 BulmaBlazorWasm
